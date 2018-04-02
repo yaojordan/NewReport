@@ -1,5 +1,5 @@
 #python2.7
-#2018-1-26 vend_dt076
+#2018-1-26 
 import sys
 import time
 from selenium import webdriver
@@ -30,7 +30,7 @@ def versionSetting():
 	
 def main():
 	
-	browser.get("http://mtkteams.mediatek.inc/sites/DT/DP2/DM7/DT_sharing/_layouts/15/listedit.aspx?List=%7B7B9BA546-5432-42F5-AC41-ECA6F60EAADA%7D")
+	browser.get("YOUR_URL")
 	
 	time.sleep(3)
 	versionSet = browser.find_element_by_id("ctl00_PlaceHolderMain_ctl09_RptControls_onetidListEdit1")
