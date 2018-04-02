@@ -5,17 +5,17 @@ import calendar
 import sys
 import shutil
 
-if sys.argv[1] == "DM7" :
-    FILE_PATH = "\\\\mtkteams\\sites\\DT\\DP2\\DM7\\DT_sharing\\Team Report\\Weekly Report\\"
+if sys.argv[1] == "??" :
+    FILE_PATH = "\\\\teams\\sites\\Team Report\\Weekly Report\\"
 
-    F_report = "_ASIP_Toolchain_Report.pptx"
-    F_AI = "_ASIP_Toolchain_Report_AI.pptx"
-    F_Modem = "_ASIP_Toolchain_Report_Modem.pptx"
-    F_Open_Platform = "_ASIP_Toolchain_Report_Open_Platform.pptx"
-    F_OP = "_ASIP_Toolchain_Report_Operation.pptx"
+    F_report = ".pptx"
+    F_AI = ".pptx"
+    F_Modem = ".pptx"
+    F_Open_Platform = ".pptx"
+    F_OP = ".pptx"
 
 else :
-    print "please set parameter DM7"
+    print "please set parameter"
     exit(1)
 
 
@@ -63,15 +63,15 @@ def main():
 
     for filename in file_list:
     
-        if filename.endswith('Report.pptx'):
+        if filename.endswith('.pptx'):
             os.rename(newFolder+filename, newFolder+after_7_date.strftime("%Y%m%d")+"_W"+y+str(w).zfill(2)+F_report)
-        elif filename.endswith('AI.pptx'):
+        elif filename.endswith('.pptx'):
             os.rename(newFolder+filename, newFolder+after_7_date.strftime("%Y%m%d")+"_W"+y+str(w).zfill(2)+F_AI)
-        elif filename.endswith('Modem.pptx'):
+        elif filename.endswith('.pptx'):
             os.rename(newFolder+filename, newFolder+after_7_date.strftime("%Y%m%d")+"_W"+y+str(w).zfill(2)+F_Modem)
-        elif filename.endswith('Open_Platform.pptx'):
+        elif filename.endswith('.pptx'):
             os.rename(newFolder+filename, newFolder+after_7_date.strftime("%Y%m%d")+"_W"+y+str(w).zfill(2)+F_OP)
-        elif filename.endswith('Operation.pptx'):
+        elif filename.endswith('.pptx'):
             os.rename(newFolder+filename, newFolder+after_7_date.strftime("%Y%m%d")+"_W"+y+str(w).zfill(2)+F_Open_Platform)
 
 main()
